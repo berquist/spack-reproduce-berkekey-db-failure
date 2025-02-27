@@ -36,4 +36,6 @@ jobs:
           spack debug report
       - name: Install
         run: |
-          spack install berkeley-db
+          python -m pip install -U pip setuptools
+          python -m pip install pyyaml
+          python ./spack_install_over_compilers.py
